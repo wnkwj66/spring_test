@@ -1,13 +1,15 @@
 package hello.hollo_spring.repository;
 
 import hello.hollo_spring.domain.Member;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
-@Repository
+// @Repository
 public class MemoryMemberRepository implements MemberRepository{
 
+    // @Autowired
     private static Map<Long, Member> store = new HashMap<>();
     private static long sequence = 0L;
 
