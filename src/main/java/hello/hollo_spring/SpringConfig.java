@@ -1,13 +1,25 @@
 package hello.hollo_spring;
 
+import hello.hollo_spring.repository.JdbcMemberRepository;
 import hello.hollo_spring.repository.MemberRepository;
 import hello.hollo_spring.repository.MemoryMemberRepository;
 import hello.hollo_spring.service.MemberService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import javax.sql.DataSource;
+
 @Configuration
 public class SpringConfig {
+
+    private DataSource dataSource;
+
+    @Autowired
+    public SpringConfig(DataSource dataSource) {
+        this.dataSource = dataSource;
+    }
+
     /**
      * 자바 코드로 직접 스프링빈 등록
      */
@@ -18,6 +30,7 @@ public class SpringConfig {
 
     @Bean
     public MemberRepository memberRepository() {
-        return new MemoryMemberRepository();
+//        return new MemoryMemberRepository();
+        return new JdbcMemberRepository(dataSource);
     }
 }
