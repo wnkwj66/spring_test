@@ -1,6 +1,6 @@
-package hello.hollo_spring.repository;
+package hello.hello_spring.repository;
 
-import hello.hollo_spring.domain.Member;
+import hello.hello_spring.domain.Member;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;

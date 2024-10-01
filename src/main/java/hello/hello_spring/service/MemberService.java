@@ -1,10 +1,7 @@
-package hello.hollo_spring.service;
+package hello.hello_spring.service;
 
-import hello.hollo_spring.domain.Member;
-import hello.hollo_spring.repository.MemberRepository;
-import hello.hollo_spring.repository.MemoryMemberRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import hello.hello_spring.domain.Member;
+import hello.hello_spring.repository.MemberRepository;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;

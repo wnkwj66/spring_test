@@ -1,14 +1,10 @@
-package hello.hollo_spring.service;
+package hello.hello_spring.service;
 
-import hello.hollo_spring.domain.Member;
-import hello.hollo_spring.repository.MemberRepository;
-import hello.hollo_spring.repository.MemoryMemberRepository;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
+import hello.hello_spring.domain.Member;
+import hello.hello_spring.repository.MemberRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.annotation.Commit;
 import org.springframework.transaction.annotation.Transactional;
 
 import static org.assertj.core.api.Assertions.assertThat;

@@ -1,14 +1,9 @@
-package hello.hollo_spring;
+package hello.hello_spring;
 
-import hello.hollo_spring.repository.*;
-import hello.hollo_spring.service.MemberService;
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.PersistenceContext;
-import org.springframework.beans.factory.annotation.Autowired;
+import hello.hello_spring.repository.*;
+import hello.hello_spring.service.MemberService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
-import javax.sql.DataSource;
 
 @Configuration
 public class SpringConfig {
@@ -65,4 +60,12 @@ public class SpringConfig {
     public MemberService memberService() {
         return new MemberService(memberRepository);
     }
+
+    // @Component 로 대체 가능 @component
+    /*
+    @Bean
+    public TimeTraceAop timeTraceAop() {
+        return new TimeTraceAop();
+    }
+    */
 }

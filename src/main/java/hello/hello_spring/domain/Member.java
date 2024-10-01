@@ -1,4 +1,4 @@
-package hello.hollo_spring.domain;
+package hello.hello_spring.domain;
 
 import jakarta.persistence.*;
 

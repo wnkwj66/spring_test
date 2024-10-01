@@ -1,8 +1,6 @@
-package hello.hollo_spring.repository;
+package hello.hello_spring.repository;
 
-import hello.hollo_spring.domain.Member;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
+import hello.hello_spring.domain.Member;
 
 import java.util.*;
 
